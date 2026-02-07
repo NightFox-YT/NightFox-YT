@@ -1,0 +1,43 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .terminal {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      fill: #00ff00;
+    }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .line {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    .line:nth-child(5) { animation-delay: 0s; }
+    .line:nth-child(6) { animation-delay: 1s; }
+    .line:nth-child(7) { animation-delay: 2s; }
+    .line:nth-child(8) { animation-delay: 3s; }
+    .line:nth-child(9) { animation-delay: 4s; }
+    .line:nth-child(10) { animation-delay: 5s; }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+  
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <rect width="100%" height="30" fill="#161b22"/>
+  
+  <text x="10" y="20" class="terminal" fill="#ffffff">nightfox@github:~$</text>
+  
+  <text x="10" y="50" class="terminal line">$ About Me</text>
+  <text x="10" y="70" class="terminal line">&gt; High school student</text>
+  <text x="10" y="90" class="terminal line">&gt; Low-level enthusiast</text>
+  <text x="10" y="110" class="terminal line">&gt; Creating bots for Telegram &amp; Discord</text>
+  <text x="10" y="130" class="terminal line">&gt; Building own OS in NASM</text>
+  <text x="10" y="150" class="terminal line">&gt; Exploring the depths of programming</text>
+  
+  <text x="10" y="180" class="terminal blink">█</text>
+</svg>
