@@ -1,0 +1,6 @@
+/* Сброс стандартных стилей браузера + единый шрифт */
+
+* {
+  box-sizing: border-box;
+  font-family: Inter,system-ui,sans-serif
+}
