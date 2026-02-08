@@ -1,0 +1,133 @@
+/* Основные цвета */
+:root {
+  --bg: #050814;
+  --bg-soft: #0a1530;
+  --card: rgba(255,255,255,.08);
+  --accent: #8bb0ff;
+  --text: #eaf0ff;
+  --subtext: #b7bdd6;
+}
+
+/* Основа */
+body {
+  margin: 0px;
+  background:
+    radial-gradient(circle at 10% 2%, #12245a 0%, transparent 8%),
+    radial-gradient(circle at 100% 10%, #12245a 0%, transparent 8%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* Заголовок */
+header {
+  min-height: 18vh;
+  padding: 2vh 3vw;
+
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+/* Луна */
+.moon {
+  width: min(21vw, 480px);
+  aspect-ratio: 1 / 1;
+
+  background: radial-gradient(circle, #fff, #b7c7ff 55%, #7a91ff 75%);
+  box-shadow: 0 0 60px rgba(140,160,255,.7);
+  border-radius: 50%;
+
+  animation: pulse 5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Анимация луны */
+@keyframes pulse {
+  0%, 100% {transform:scale(1)}
+  50% {transform:scale(1.08)}
+}
+
+/* Основной элемент заголовка */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4vh;
+  gap: clamp(40px, 8vw, 120px);
+}
+
+/* Текст под заголовком */
+.header-desc {
+  margin-top: 2px;
+  max-width: 520px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: var(--subtext);
+  align-items: flex-start;
+}
+
+/* Адаптация к мобильным устройствам */
+@media (max-width: 740px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-text {
+    align-items: center;
+  }
+}
+
+/* Секции */
+section {
+  padding: 4vh 3vw;
+}
+
+/* Заголовки*/
+h1 {
+  font-size: 4rem;
+  margin-bottom: 4vh;
+}
+h2 {
+  color: var(--text);
+}
+
+/* Карточки */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Одна карточка */
+.card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 24px;
+}
+.card h3{
+  margin: 0px 0px 4px;
+  color: var(--subtext);
+  font-size: 1rem
+}
+
+.value{
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent)
+}
+
+/* Область графиков */
+canvas{
+  max-width: 60%;
+  margin-top: 40px;
+}
+
+/* Подпись */
+footer{
+  padding: 40px;
+  text-align: center;
+  color: var(--subtext);
+}
